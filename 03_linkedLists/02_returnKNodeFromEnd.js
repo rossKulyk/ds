@@ -14,4 +14,18 @@ const findNode = (node, k) => {
     fast = fast.next;
   }
   return slow;
+
+  // Length counting approach. TC: O(n), SC: O(1)
+  // let lenCount = 0;
+  // let curHead = head;
+  // while (curHead) {
+  //   curHead = curHead.next;
+  //   lenCount++;
+  // }
+  // let middleNode = Math.floor(lenCount / 2);
+  // curHead = head;
+  // for (let i = 0; i < middleNode; i++) {
+  //   curHead = curHead.next;
+  // }
+  // return curHead;
 };

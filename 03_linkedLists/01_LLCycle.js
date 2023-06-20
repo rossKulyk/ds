@@ -3,17 +3,17 @@
 // be reached again by continuously following the next pointer.
 
 const hasCycle = function (head) {
-  // 1. O(n) time and O(1) space
+  // 1. Two pinters(fast/slow) approach. O(n) time and O(1) space
   let slow = head;
   let fast = head;
   while (fast && fast.next) {
     if (slow.next === fast.next.next) return true;
-    // if(!fast || !fast.next)return false
     fast = fast.next.next;
     slow = slow.next;
   }
   return false;
-  // // 2. faster
+
+  // // Two pinters(fast/slow) approach. O(n) time and O(1) space
   // let slow = head;
   // let fast = head;
   // while(fast && slow){
@@ -25,14 +25,18 @@ const hasCycle = function (head) {
   //     slow = slow.next
   // }
   // return false;
-  // // 3: O(n) time and O(n) space
+
+  // // 3. Hash Table approach: O(n) time and O(n) space
+  // if the LL doesn't have a cycle, will reach null and finish;
+  // if the LL has a cycle, will visit a node twice
   // let seen = {};
-  // while(head){
-  //     if(seen[head]){
-  //         return true;
-  //     }
-  //     seen[head] = true;
-  //     head = head.next;
+  // while (head) {
+  //   console.log(seen);
+  //   if (seen[head]) {
+  //     return true;
+  //   }
+  //   seen[head] = true;
+  //   head = head.next;
   // }
   // return false;
 };
