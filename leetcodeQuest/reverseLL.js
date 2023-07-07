@@ -5,17 +5,7 @@ function ListNode(val, next) {
 }
 
 const reverseList = function (head) {
-  console.log(".   HEAD > ", head, ", HEAD.next > ", head?.next);
-  // let curr = head;
-  let prev = null,
-    next = null;
-  while (head.next) {
-    next = head.next;
-  }
   // if(!head || !head.next){
-  //     console.log("..... RETURN ....")
-  // console.log("")
-
   //     return head;
   // }
   // let reversedSublist = reverseList(head.next);
@@ -27,17 +17,14 @@ const reverseList = function (head) {
   // console.log("@@@@ FINAL SUBLIST: ",reversedSublist, "&& HEAD:",head)
   // console.log("------- END ---------------")
   // return reversedSublist;
-
   // Iterative
   // if(!head)return head;
   // let curr = head;
   // while(head?.next){// 1-> 2 -> 3 -> 4 -> 5
   //     let nextNode = head.next;
   //     console.log("1) CURR", curr," ,.nextNode > ", nextNode, ", nextNode.NEXT: ",nextNode.next,", HEAD: ",head,", HEAD.NEXT: ",head.next)
-
   //     head.next = nextNode.next;
   //     console.log(" 2. HEAD: ",head, ", nextNode: ", nextNode, ", nextNode.NEXT: ", nextNode.next)
-
   //     nextNode.next = curr;
   //     console.log("  3. nextNode.next: ",nextNode.next, ", nextNode: ", nextNode)
   //     curr = nextNode;
